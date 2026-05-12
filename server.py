@@ -73,8 +73,8 @@ def webhook():
 
 @app.route('/setup_webhook')
 def setup_webhook():
-    r = requests.get(f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/setWebhook?url=https://tiktok-video-production.up.railway.app/webhook')
+    r = requests.get(f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/setWebhook?url=web-tiktok-video.up.railway.app/webhook')
     return jsonify(r.json())
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
